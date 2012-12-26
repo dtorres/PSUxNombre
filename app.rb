@@ -1,7 +1,7 @@
 require "sinatra"
 
 get "/resultados" do
-	"Not Yet"
+    "Not Yet"
 end
 
 get "/" do 
