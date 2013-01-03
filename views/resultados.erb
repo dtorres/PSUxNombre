@@ -28,15 +28,35 @@ if (false/* mobileRegex.test(navigator.userAgent) */) {
 <div class="ads">
     <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 </div>
-<form action="/resultados">
-    <label for="nombres">Nombres:</label>
-    <input placeholder="BENJAMIN DARIO" type="text" name="nombres"/>
-    <label for="apellido_pat">Apellido Paterno:</label>
-    <input placeholder="CORDERO" type="text" name="apellido_pat"/>
-    <label for="apellido_mat">Apellido Materno:</label>
-    <input placeholder="RODRIGUEZ" type="text" name="apellido_mat"/>
-    <input type="submit"/>
-</form>
+<table>
+    <thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Matematicas</th>
+			<th>Lenguaje</th>
+			<th>Ciencias</th>
+			<th>Historia</th>
+			<th>NEM</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for result in results %>
+		<tr>
+			<td><%= result["nombre"] %></td>
+			<td><%= result["mat"] %></td>
+			<td><%= result["le"] %></td>
+			<td><%= result["ci"] %></td>
+			<td><%= result["cs"] %></td>
+			<td><%= result["nem"] %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<div class="ads">
+    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+
 <footer>
 <p>Por <a href="http://www.dtorres.me">Diego Torres</a>.</p>
 <p>¿Sugerencias, Agradecimientos.... Puteadas? Mi Twitter es: <a href="http://www.twitter.com/dtorres">@dtorres</a>
